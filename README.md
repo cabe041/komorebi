@@ -1,4 +1,4 @@
-
+# PROJETO TRADUZIDO PARA PORGUÉS (PT-BR)
 
 # Komorebi
 
