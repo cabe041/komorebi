@@ -1,335 +1,237 @@
-# komorebi
 
-Tiling Window Management for Windows.
+
+# Komorebi
+
+Gerenciamento de Janelas em Mosaico para Windows.
 
 <p>
   <a href="https://techforpalestine.org/learn-more">
     <img alt="Tech for Palestine" src="https://badge.techforpalestine.org/default">
   </a>
-  <img alt="GitHub Workflow Status" src="https://img.shields.io/github/actions/workflow/status/LGUG2Z/komorebi/.github/workflows/windows.yaml">
-  <img alt="GitHub all releases" src="https://img.shields.io/github/downloads/LGUG2Z/komorebi/total">
-  <img alt="GitHub commits since latest release (by date) for a branch" src="https://img.shields.io/github/commits-since/LGUG2Z/komorebi/latest">
-  <img alt="Active Individual Commercial Use Licenses" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Flgug2z-ecstaticmagentacheetah.web.val.run&query=%24.&label=active%20individual%20commercial%20use%20licenses&cacheSeconds=3600&link=https%3A%2F%2Flgug2z.com%2Fsoftware%2Fkomorebi">
+  <img alt="Status do Fluxo de Trabalho do GitHub" src="https://img.shields.io/github/actions/workflow/status/LGUG2Z/komorebi/.github/workflows/windows.yaml">
+  <img alt="Todos os Downloads do GitHub" src="https://img.shields.io/github/downloads/LGUG2Z/komorebi/total">
+  <img alt="Commits do GitHub desde o Último Lançamento (por data) para um Branch" src="https://img.shields.io/github/commits-since/LGUG2Z/komorebi/latest">
+  <img alt="Licenças Ativas de Uso Comercial Individual" src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Flgug2z-ecstaticmagentacheetah.web.val.run&query=%24.&label=licen%C3%A7as%20ativas%20de%20uso%20comercial%20individual&cacheSeconds=3600&link=https%3A%2F%2Flgug2z.com%2Fsoftware%2Fkomorebi">
   <a href="https://discord.gg/mGkn66PHkx">
     <img alt="Discord" src="https://img.shields.io/discord/898554690126630914">
   </a>
   <a href="https://github.com/sponsors/LGUG2Z">
-    <img alt="GitHub Sponsors" src="https://img.shields.io/github/sponsors/LGUG2Z">
+    <img alt="Patrocinadores do GitHub" src="https://img.shields.io/github/sponsors/LGUG2Z">
   </a>
   <a href="https://ko-fi.com/lgug2z">
-    <img alt="Ko-fi" src="https://img.shields.io/badge/kofi-tip-green">
+    <img alt="Ko-fi" src="https://img.shields.io/badge/kofi-doar-green">
   </a>
   <a href="https://notado.app/feeds/jado/software-development">
-    <img alt="Notado Feed" src="https://img.shields.io/badge/Notado-Subscribe-informational">
+    <img alt="Feed Notado" src="https://img.shields.io/badge/Notado-Inscrever-se-informational">
   </a>
   <a href="https://www.youtube.com/channel/UCeai3-do-9O4MNy9_xjO6mg?sub_confirmation=1">
     <img alt="YouTube" src="https://img.shields.io/youtube/channel/subscribers/UCeai3-do-9O4MNy9_xjO6mg">
   </a>
 </p>
 
-![screenshot](https://user-images.githubusercontent.com/13164844/184027064-f5a6cec2-2865-4d65-a549-a1f1da589abf.png)
+![captura de tela](https://user-images.githubusercontent.com/13164844/184027064-f5a6cec2-2865-4d65-a549-a1f1da589abf.png)
 
-## Overview
+## Visão Geral
 
-_komorebi_ is a tiling window manager that works as an extension to Microsoft's
-[Desktop Window
-Manager](https://docs.microsoft.com/en-us/windows/win32/dwm/dwm-overview) in
-Windows 10 and above.
+O _komorebi_ é um gerenciador de janelas em mosaico que funciona como uma extensão do [Gerenciador de Janelas da Área de Trabalho](https://docs.microsoft.com/en-us/windows/win32/dwm/dwm-overview) da Microsoft no Windows 10 e versões superiores.
 
-_komorebi_ allows you to control application windows, virtual workspaces and display monitors with a CLI which can be
-used with third-party software such as [`whkd`](https://github.com/LGUG2Z/whkd)
-and [AutoHotKey](https://github.com/Lexikos/AutoHotkey_L) to set user-defined keyboard shortcuts.
+O _komorebi_ permite que você controle janelas de aplicativos, espaços de trabalho virtuais e monitores de exibição com uma interface de linha de comando (CLI) que pode ser usada com softwares de terceiros, como [`whkd`](https://github.com/LGUG2Z/whkd) e [AutoHotKey](https://github.com/Lexikos/AutoHotkey_L), para configurar atalhos de teclado definidos pelo usuário.
 
-_komorebi_ aims to make _as few modifications as possible_ to the operating
-system and desktop environment by default. Users are free to make such
-modifications in their own configuration files for _komorebi_, but these will
-remain opt-in and off-by-default for the foreseeable future.
+O _komorebi_ tem como objetivo fazer _o mínimo de modificações possível_ no sistema operacional e no ambiente de área de trabalho por padrão. Os usuários podem fazer tais modificações em seus próprios arquivos de configuração para o _komorebi_, mas essas permanecerão opcionais e desativadas por padrão no futuro próximo.
 
-Please refer to the [documentation](https://lgug2z.github.io/komorebi) for instructions on how
-to [install](https://lgug2z.github.io/komorebi/installation.html) and
-[configure](https://lgug2z.github.io/komorebi/example-configurations.html)
-_komorebi_, [common workflows](https://lgug2z.github.io/komorebi/common-workflows/komorebi-config-home.html), a complete
-[configuration schema reference](https://komorebi.lgug2z.com/schema) and a
-complete [CLI reference](https://lgug2z.github.io/komorebi/cli/quickstart.html).
+Consulte a [documentação](https://lgug2z.github.io/komorebi) para instruções sobre como [instalar](https://lgug2z.github.io/komorebi/installation.html) e [configurar](https://lgug2z.github.io/komorebi/example-configurations.html) o _komorebi_, [fluxos de trabalho comuns](https://lgug2z.github.io/komorebi/common-workflows/komorebi-config-home.html), uma referência completa do [esquema de configuração](https://komorebi.lgug2z.com/schema) e uma referência completa da [CLI](https://lgug2z.github.io/komorebi/cli/quickstart.html).
 
-## Community
+## Comunidade
 
-There is a [Discord server](https://discord.gg/mGkn66PHkx) available for
-_komorebi_-related discussion, help, troubleshooting etc. If you have any
-specific feature requests or bugs to report, please create an issue in this
-repository.
+Há um [servidor no Discord](https://discord.gg/mGkn66PHkx) disponível para discussões relacionadas ao _komorebi_, ajuda, solução de problemas, etc. Se você tiver solicitações de recursos específicos ou bugs para relatar, crie uma issue no repositório.
 
-There is a [YouTube
-channel](https://www.youtube.com/channel/UCeai3-do-9O4MNy9_xjO6mg) where I post
-_komorebi_ development videos, feature previews and release overviews. Subscribing
-to the channel (which is monetized as part of the YouTube Partner Program) and
-watching videos is a really simple and passive way to contribute financially to
-the development and maintenance of _komorebi_.
+Há um [canal no YouTube](https://www.youtube.com/channel/UCeai3-do-9O4MNy9_xjO6mg) onde posto vídeos de desenvolvimento do _komorebi_, prévias de recursos e resumos de lançamentos. Inscrever-se no canal (monetizado pelo Programa de Parcerias do YouTube) e assistir aos vídeos é uma maneira simples e passiva de contribuir financeiramente para o desenvolvimento e manutenção do _komorebi_.
 
-There is an [Awesome List](https://github.com/LGUG2Z/awesome-komorebi) which
-showcases the many awesome projects that exist in the _komorebi_ ecosystem.
+Há uma [Lista Incrível](https://github.com/LGUG2Z/awesome-komorebi) que destaca os muitos projetos incríveis que existem no ecossistema do _komorebi_.
 
-## Licensing for Personal Use
+## Licenciamento para Uso Pessoal
 
-`komorebi` is [educational source
-software](https://lgug2z.com/articles/educational-source-software/).
+O `komorebi` é um [software de fonte educacional](https://lgug2z.com/articles/educational-source-software/).
 
-`komorebi` is licensed under the [Komorebi 2.0.0
-license](https://github.com/LGUG2Z/komorebi-license), which is a fork of the
-[PolyForm Strict 1.0.0
-license](https://polyformproject.org/licenses/strict/1.0.0). On a high level
-this means that you are free to do whatever you want with `komorebi` for
-personal use other than redistribution, or distribution of new works (i.e.
-hard-forks) based on the software.
+O `komorebi` é licenciado sob a [Licença Komorebi 2.0.0](https://github.com/LGUG2Z/komorebi-license), que é uma derivação da [Licença PolyForm Strict 1.0.0](https://polyformproject.org/licenses/strict/1.0.0). Em alto nível, isso significa que você é livre para fazer o que quiser com o `komorebi` para uso pessoal, exceto redistribuição ou distribuição de novos trabalhos (ou seja, forks rígidos) baseados no software.
 
-Anyone is free to make their own fork of `komorebi` with changes intended either
-for personal use or for integration back upstream via pull requests.
+Qualquer pessoa é livre para criar seu próprio fork do `komorebi` com mudanças destinadas ao uso pessoal ou para integração de volta ao projeto principal via pull requests.
 
-The [Komorebi 2.0.0 License](https://github.com/LGUG2Z/komorebi-license) does
-not permit any kind of commercial use (i.e. using `komorebi` at work).
+A [Licença Komorebi 2.0.0](https://github.com/LGUG2Z/komorebi-license) não permite nenhum tipo de uso comercial (ou seja, usar o `komorebi` no trabalho).
 
-## Sponsorship for Personal Use
+## Patrocínio para Uso Pessoal
 
-_komorebi_ is a free and educational source project, and one that encourages you
-to make charitable donations if you find the software to be useful and have the
-financial means.
+O _komorebi_ é um projeto gratuito e de fonte educacional, que incentiva doações para caridade se você achar o software útil e tiver meios financeiros.
 
-I encourage you to make a charitable donation to the [Palestine Children's
-Relief Fund](https://pcrf1.app.neoncrm.com/forms/gaza-recovery) or to contribute
-to a [Gaza Funds campaign](https://gazafunds.com) before you consider sponsoring
-me on GitHub.
+Eu incentivo você a fazer uma doação para o [Fundo de Ajuda às Crianças da Palestina](https://pcrf1.app.neoncrm.com/forms/gaza-recovery) ou contribuir para uma [campanha do Gaza Funds](https://gazafunds.com) antes de considerar me patrocinar no GitHub.
 
-[GitHub Sponsors is enabled for this
-project](https://github.com/sponsors/LGUG2Z). Sponsors can claim custom roles on
-the Discord server, get shout outs at the end of _komorebi_-related videos on
-YouTube, gain the ability to submit feature requests on the issue tracker, and
-receive releases of komorebi with "easter eggs" on physical media.
+[O GitHub Sponsors está ativado para este projeto](https://github.com/sponsors/LGUG2Z). Patrocinadores podem reivindicar papéis personalizados no servidor do Discord, receber menções no final de vídeos relacionados ao _komorebi_ no YouTube, obter a capacidade de enviar solicitações de recursos no rastreador de issues e receber lançamentos do komorebi com "easter eggs" em mídia física.
 
-If you would like to tip or sponsor the project but are unable to use GitHub
-Sponsors, you may also sponsor through [Ko-fi](https://ko-fi.com/lgug2z), or
-make an anonymous Bitcoin donation to `bc1qv73wzspc77k46uty4vp85x8sdp24mphvm58f6q`.
+Se você deseja doar ou patrocinar o projeto, mas não pode usar o GitHub Sponsors, pode patrocinar pelo [Ko-fi](https://ko-fi.com/lgug2z) ou fazer uma doação anônima em Bitcoin para `bc1qv73wzspc77k46uty4vp85x8sdp24mphvm58f6q`.
 
-## Licensing for Commercial Use
+## Licenciamento para Uso Comercial
 
-A dedicated Individual Commercial Use License is available for those who want to
-use `komorebi` at work.
+Uma Licença de Uso Comercial Individual dedicada está disponível para aqueles que desejam usar o `komorebi` no trabalho.
 
-The Individual Commerical Use License adds “Commercial Use” as a “Permitted Use”
-for the licensed individual only, for the duration of a valid paid license
-subscription only. All provisions and restrictions enumerated in the [Komorebi
-License](https://github.com/LGUG2Z/komorebi-license) continue to apply.
+A Licença de Uso Comercial Individual adiciona "Uso Comercial" como um "Uso Permitido" apenas para o indivíduo licenciado, apenas durante a validade de uma assinatura de licença paga. Todas as disposições e restrições enumeradas na [Licença Komorebi](https://github.com/LGUG2Z/komorebi-license) continuam a se aplicar.
 
-More information, pricing and purchase links for Individual Commercial Use
-Licenses [can be found here](https://lgug2z.com/software/komorebi).
+Mais informações, preços e links de compra para Licenças de Uso Comercial Individual [podem ser encontrados aqui](https://lgug2z.com/software/komorebi).
 
-# Installation
+# Instalação
 
-A [detailed installation and quickstart
-guide](https://lgug2z.github.io/komorebi/installation.html) is available which shows how to get started
-using `scoop`, `winget` or building from source.
+Um [guia detalhado de instalação e início rápido](https://lgug2z.github.io/komorebi/installation.html) está disponível, mostrando como começar usando `scoop`, `winget` ou compilando a partir do código-fonte.
 
-[![Watch the quickstart walkthrough video](https://img.youtube.com/vi/MMZUAtHbTYY/hqdefault.jpg)](https://www.youtube.com/watch?v=MMZUAtHbTYY)
+[![Assista ao vídeo de introdução rápida](https://img.youtube.com/vi/MMZUAtHbTYY/hqdefault.jpg)](https://www.youtube.com/watch?v=MMZUAtHbTYY)
 
-# Comparison With Fancy Zones
+# Comparação com Fancy Zones
 
-Community member [Olge](https://www.youtube.com/@polle5555) has created an
-excellent video which compares the default window management features of
-Windows 11, Fancy Zones and komorebi.
+O membro da comunidade [Olge](https://www.youtube.com/@polle5555) criou um excelente vídeo que compara os recursos padrão de gerenciamento de janelas do Windows 11, Fancy Zones e komorebi.
 
-If you are not familiar with tiling window managers or if you are looking at
-komorebi and wondering "how is this different from Fancy Zones? 🤔", this short
-video will answer the majority of your questions.
+Se você não está familiarizado com gerenciadores de janelas em mosaico ou está se perguntando "como isso é diferente do Fancy Zones? 🤔", este vídeo curto responderá à maioria das suas perguntas.
 
-[![Watch the comparison video](https://img.youtube.com/vi/0LCbS_gm0RA/hqdefault.jpg)](https://www.youtube.com/watch?v=0LCbS_gm0RA)
+[![Assista ao vídeo de comparação](https://img.youtube.com/vi/0LCbS_gm0RA/hqdefault.jpg)](https://www.youtube.com/watch?v=0LCbS_gm0RA)
 
-# Demonstrations
+# Demonstrações
 
-[@amnweb](https://github.com/amnweb) showing _komorebi_ `v0.1.28` running on Windows 11 with window borders,
-unfocused window transparency and animations enabled, using a custom status bar integrated using
-_komorebi_'
-s [Window Manager Event Subscriptions](https://github.com/LGUG2Z/komorebi?tab=readme-ov-file#window-manager-event-subscriptions).
+[@amnweb](https://github.com/amnweb) mostrando o _komorebi_ `v0.1.28` rodando no Windows 11 com bordas de janela, transparência de janelas não focadas e animações ativadas, usando uma barra de status personalizada integrada com as [Assinaturas de Eventos do Gerenciador de Janelas](https://github.com/LGUG2Z/komorebi?tab=readme-ov-file#window-manager-event-subscriptions) do _komorebi_.
 
 https://github.com/LGUG2Z/komorebi/assets/13164844/21be8dc4-fa76-4f70-9b37-1d316f4b40c2
 
-[@haxibami](https://github.com/haxibami) showing _komorebi_ running on Windows
-11 with a terminal emulator, a web browser and a code editor. The original
-video can be viewed
-[here](https://twitter.com/haxibami/status/1501560766578659332).
+[@haxibami](https://github.com/haxibami) mostrando o _komorebi_ rodando no Windows 11 com um emulador de terminal, um navegador web e um editor de código. O vídeo original pode ser visto [aqui](https://twitter.com/haxibami/status/1501560766578659332).
 
 https://user-images.githubusercontent.com/13164844/163496447-20c3ff0a-c5d8-40d1-9cc8-156c4cebf12e.mp4
 
-[@aik2mlj](https://github.com/aik2mlj) showing _komorebi_ running on Windows 11
-with multiple workspaces, terminal emulators, a web browser, and the
-[yasb](https://github.com/DenBot/yasb) status bar with the _komorebi_ workspace
-widget enabled. The original video can be viewed
-[here](https://zhuanlan.zhihu.com/p/455064481).
+[@aik2mlj](https://github.com/aik2mlj) mostrando o _komorebi_ rodando no Windows 11 com múltiplos espaços de trabalho, emuladores de terminal, um navegador web e a barra de status [yasb](https://github.com/DenBot/yasb) com o widget de espaço de trabalho do _komorebi_ ativado. O vídeo original pode ser visto [aqui](https://zhuanlan.zhihu.com/p/455064481).
 
 https://user-images.githubusercontent.com/13164844/163496414-a9cde3d1-b8a7-4a7a-96fb-a8985380bc70.mp4
 
-# Contribution Guidelines
+# Diretrizes de Contribuição
 
-If you would like to contribute to `komorebi` please take the time to carefully
-read the guidelines below.
+Se você deseja contribuir para o `komorebi`, por favor, dedique um tempo para ler cuidadosamente as diretrizes abaixo.
 
-Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for more information about how
-code contributions to `komorebi` are licensed.
+Consulte [CONTRIBUTING.md](./CONTRIBUTING.md) para mais informações sobre como as contribuições de código para o `komorebi` são licenciadas.
 
-## Commit hygiene
+## Higiene de Commits
 
-- Flatten all `use` statements
-- Run `cargo +stable clippy` and ensure that all lints and suggestions have been addressed before committing
-- Run `cargo +nightly fmt --all` to ensure consistent formatting before committing
-- Use `git cz` with
-  the [Commitizen CLI](https://github.com/commitizen/cz-cli#conventional-commit-messages-as-a-global-utility) to prepare
-  commit messages
-- Provide **at least** one short sentence or paragraph in your commit message body to describe your thought process for
-  the changes being committed
+- Achate todas as declarações `use`
+- Execute `cargo +stable clippy` e garanta que todas as sugestões e alertas foram resolvidos antes de fazer o commit
+- Execute `cargo +nightly fmt --all` para garantir formatação consistente antes de fazer o commit
+- Use `git cz` com a [CLI Commitizen](https://github.com/commitizen/cz-cli#conventional-commit-messages-as-a-global-utility) para preparar mensagens de commit
+- Forneça **pelo menos** uma frase ou parágrafo curto na mensagem de commit para descrever o raciocínio das mudanças sendo commitadas
 
-## PRs should contain only a single feature or bug fix
+## PRs devem conter apenas uma funcionalidade ou correção de bug
 
-It is very difficult to review pull requests which touch multiple unrelated features and parts of the codebase.
+É muito difícil revisar pull requests que tocam em múltiplas funcionalidades ou partes não relacionadas do código.
 
-Please do not submit pull requests like this; you will be asked to separate them into smaller PRs that deal only with
-one feature or bug fix at a time.
+Por favor, não envie pull requests assim; você será solicitado a separá-los em PRs menores que lidem com apenas uma funcionalidade ou correção de bug por vez.
 
-If you are working on multiple features and bug fixes, I suggest that you cut a branch called `local-trunk`
-from `master` which you keep up to date, and rebase the various independent branches you are working on onto that branch
-if you want to test them together or create a build with everything integrated.
+Se você está trabalhando em múltiplas funcionalidades e correções de bugs, sugiro que crie um branch chamado `local-trunk` a partir do `master`, que você mantenha atualizado, e rebase os vários branches independentes que você está trabalhando nesse branch se quiser testá-los juntos ou criar uma build com tudo integrado.
 
-## Refactors to the codebase must have prior approval
+## Refatorações no código devem ter aprovação prévia
 
-`komorebi` is a mature codebase with an internal consistency and structure that has developed organically over close to
-half a decade.
+O `komorebi` é uma base de código madura com uma consistência e estrutura interna que se desenvolveu organicamente ao longo de quase meia década.
 
-There are [countless hours of live coding videos](https://youtube.com/@LGUG2Z) demonstrating work on this project and
-showing new contributors how to do everything from basic tasks like implementing new `komorebic` commands to
-distinguishing monitors by manufacturer hardware identifiers and video card ports.
+Há [inúmeras horas de vídeos de codificação ao vivo](https://youtube.com/@LGUG2Z) demonstrando o trabalho neste projeto e mostrando aos novos contribuidores como fazer tudo, desde tarefas básicas como implementar novos comandos `komorebic` até distinguir monitores por identificadores de hardware do fabricante e portas de placa de vídeo.
 
-Refactors to the structure of the codebase are not taken lightly and require prior discussion and approval.
+Refatorações na estrutura do código não são tomadas de ânimo leve e requerem discussão e aprovação prévias.
 
-Please do not start refactoring the codebase with the expectation of having your changes integrated until you receive an
-explicit approval or a request to do so.
+Por favor, não comece a refatorar o código com a expectativa de ter suas mudanças integradas até receber uma aprovação explícita ou uma solicitação para fazê-lo.
 
-Similarly, when implementing features and bug fixes, please stick to the structure of the codebase as much as possible
-and do not take this as an opportunity to do some "refactoring along the way".
+Da mesma forma, ao implementar funcionalidades e correções de bugs, por favor, siga a estrutura do código o máximo possível e não use isso como uma oportunidade para fazer "refatorações pelo caminho".
 
-It is extremely difficult to review PRs for features and bug fixes if they are lost in sweeping changes to the structure
-of the codebase.
+É extremamente difícil revisar PRs para funcionalidades e correções de bugs se elas estiverem perdidas em mudanças amplas na estrutura do código.
 
-## Breaking changes to user-facing interfaces are unacceptable
+## Mudanças que quebram interfaces voltadas para o usuário são inaceitáveis
 
-This includes but is not limited to:
+Isso inclui, mas não se limita a:
 
-- All `komorebic` commands
-- The `komorebi.json` schema
-- The [
-  `komorebi-application-specific-configuration`](https://github.com/LGUG2Z/komorebi-application-specific-configuration)
-  schema
+- Todos os comandos `komorebic`
+- O esquema `komorebi.json`
+- O esquema [`komorebi-application-specific-configuration`](https://github.com/LGUG2Z/komorebi-application-specific-configuration)
 
-No user should ever find that their configuration file has stopped working after upgrading to a new version
-of `komorebi`.
+Nenhum usuário deve descobrir que seu arquivo de configuração parou de funcionar após atualizar para uma nova versão do `komorebi`.
 
-More often than not there are ways to reformulate changes that may initially seem like they require breaking user-facing
-interfaces into additive changes.
+Na maioria das vezes, há maneiras de reformular mudanças que inicialmente parecem exigir a quebra de interfaces voltadas para o usuário em mudanças aditivas.
 
-For some inspiration please take a look
-at [this commit](https://github.com/LGUG2Z/komorebi/commit/e7d928a065eb63bb4ea1fb864c69c1cae8cc763b) which added the
-ability for users to specify colours in `komorebi.json` in Hex format alongside RGB.
+Para alguma inspiração, por favor, dê uma olhada [neste commit](https://github.com/LGUG2Z/komorebi/commit/e7d928a065eb63bb4ea1fb864c69c1cae8cc763b) que adicionou a capacidade para os usuários especificarem cores no `komorebi.json` no formato Hex ao lado de RGB.
 
-There is also a process in place for graceful, non-breaking, deprecation of configuration options that are no longer
-required.
+Também há um processo em vigor para depreciação graciosa e não disruptiva de opções de configuração que não são mais necessárias.
 
-# Development
+# Desenvolvimento
 
-If you use IntelliJ, you should enable the following settings to ensure that code generated by macros is recognised by
-the IDE for completions and navigation:
+Se você usa IntelliJ, deve ativar as seguintes configurações para garantir que o código gerado por macros seja reconhecido pelo IDE para autocompletar:
 
-- Set `Expand declarative macros`
-  to `Use new engine` under "Settings > Langauges & Frameworks > Rust"
-- Enable the following experimental features:
-    - `org.rust.cargo.evaluate.build.scripts`
-    - `org.rust.macros.proc`
+- Defina `Expandir macros declarativas` como `Usar novo motor` em "Configurações > Linguagens e Frameworks > Rust"
+- Ative os seguintes recursos experimentais:
+  - `org.rust.cargo.evaluate.build.scripts`
+  - `org.rust.macros.proc`
 
-# Logs and Debugging
+# Logs e Depuração
 
-Logs from `komorebi` will be appended to `%LOCALAPPDATA%/komorebi/komorebi.log`; this file is never rotated or
-overwritten, so it will keep growing until it is deleted by the user.
+Os logs do `komorebi` serão adicionados a `%LOCALAPPDATA%/komorebi/komorebi.log`; este arquivo nunca é rotacionado ou sobrescrito, então ele continuará crescendo até ser deletado pelo usuário.
 
-Whenever running the `komorebic stop` command or sending a Ctrl-C signal to `komorebi` directly, the `komorebi` process
-ensures that all hidden windows are restored before termination.
+Sempre que o comando `komorebic stop` for executado ou um sinal Ctrl+C for enviado diretamente ao `komorebi`, o processo `komorebi` garante que todas as janelas ocultas sejam restauradas antes do término.
 
-If however, you ever end up with windows that are hidden and cannot be restored, a list of window handles known
-to `komorebi` are stored and continuously updated in `%LOCALAPPDATA%/komorebi//komorebi.hwnd.json`.
+Se, no entanto, você acabar com janelas ocultas que não podem ser restauradas, uma lista de identificadores de janela conhecidos pelo `komorebi` é armazenada e atualizada continuamente em `%LOCALAPPDATA%/komorebi//komorebi.hwnd.json`.
 
-## Restoring Windows
+## Restauração de Janelas
 
-Running `komorebic restore-windows` will read the list of window handles and forcibly restore them, regardless of
-whether the main `komorebi` process is running.
+Executar `komorebic restore-windows` lerá a lista de identificadores de janelas e os restaurará, independentemente de o processo principal do `komorebi` estar em execução.
 
-## Panics and Deadlocks
+## Falhas e Deadlocks
 
-If `komorebi` ever stops responding, it is most likely either due to either a panic or a deadlock. In the case of a
-panic, this will be reported in the log. In the case of a deadlock, there will not be any errors in the log, but the
-process and the log will appear frozen.
+Se o `komorebi` parar de responder, é mais provável que seja devido a um pânico ou um deadlock. No caso de um pânico, isso será relatado no log. No caso de um deadlock, não haverá erros no log, mas o processo e o log parecerão congelados.
 
-If you believe you have encountered a deadlock, you can compile `komorebi` with `--features deadlock_detection` and try
-reproducing the deadlock again. This will check for deadlocks every 5 seconds in the background, and if a deadlock is
-found, information about it will appear in the log which can be shared when opening an issue.
+Se você acredita que encontrou um deadlock, pode compilar o `komorebi` com `--features deadlock_detection` e tentar reproduzir o deadlock novamente. Isso verificará deadlocks a cada 5 segundos em segundo plano, e se um deadlock for encontrado, informações sobre ele aparecerão no log, que podem ser compartilhadas ao abrir uma issue.
 
-# Window Manager State and Integrations
+# Estado do Gerenciador de Janelas e Integrações
 
-The current state of the window manager can be queried using the `komorebic state` command, which returns a JSON
-representation of the `State` struct.
+O estado atual do gerenciador de janelas pode ser consultado usando o comando `komorebic state`, que retorna uma representação em JSON da estrutura `State`.
 
-This may also be polled to build further integrations and widgets on top of.
+Isso também pode ser consultado para construir mais integrações e widgets em cima disso.
 
-# Window Manager Event Subscriptions
+# Assinaturas de Eventos do Gerenciador de Janelas
 
-## Named Pipes
+## Pipes Nomeados
 
-It is possible to subscribe to notifications of every `WindowManagerEvent` and `SocketMessage` handled
-by `komorebi` using [Named Pipes](https://docs.microsoft.com/en-us/windows/win32/ipc/named-pipes).
+É possível se inscrever para notificações de cada `Evento do Gerenciador de Janelas` e `MensagemSocket` manejados pelo `komorebi` usando [Pipes Nomeados](https://docs.microsoft.com/en-us/windows/win32/ipc/named-pipes).
 
-First, your application must create a named pipe. Once the named pipe has been created, run the following command:
+Primeiro, seu aplicativo deve criar um pipe nomeado. Uma vez que o pipe nomeado tenha sido criado, execute o seguinte comando:
 
 ```powershell
-komorebic.exe subscribe-pipe <your pipe name>
+komorebic.exe subscribe-pipe <nome-do-seu-pipe>
 ```
 
-Note that you do not have to include the full path of the named pipe, just the name.
+Note que você não precisa incluir o caminho completo do pipe nomeado, apenas o nome.
 
-If the named pipe exists, `komorebi` will start pushing JSON data of successfully handled events and messages:
+Se o pipe nomeado existir, o `komorebi` começará a enviar dados JSON de eventos e mensagens manipulados com sucesso:
 
 ```json lines
 {"event":{"type":"AddSubscriber","content":"yasb"},"state":{}}
-{"event":{"type":"FocusWindow","content":"Left"},"state":{}}
+{"event":{"type":"FocusWindow","content":"Esquerda"},"state":{}}
 {"event":{"type":"FocusChange","content":["SystemForeground",{"hwnd":131444,"title":"komorebi – README.md","exe":"idea64.exe","class":"SunAwtFrame","rect":{"left":13,"top":60,"right":1520,"bottom":1655}}]},"state":{}}
 {"event":{"type":"MonitorPoll","content":["ObjectCreate",{"hwnd":5572450,"title":"OLEChannelWnd","exe":"explorer.exe","class":"OleMainThreadWndClass","rect":{"left":0,"top":0,"right":0,"bottom":0}}]},"state":{}}
-{"event":{"type":"FocusWindow","content":"Right"},"state":{}}
+{"event":{"type":"FocusWindow","content":"Direita"},"state":{}}
 {"event":{"type":"FocusChange","content":["SystemForeground",{"hwnd":132968,"title":"Windows PowerShell","exe":"WindowsTerminal.exe","class":"CASCADIA_HOSTING_WINDOW_CLASS","rect":{"left":1539,"top":60,"right":1520,"bottom":821}}]},"state":{}}
-{"event":{"type":"FocusWindow","content":"Down"},"state":{}}
+{"event":{"type":"FocusWindow","content":"Baixo"},"state":{}}
 {"event":{"type":"FocusChange","content":["SystemForeground",{"hwnd":329264,"title":"den — Mozilla Firefox","exe":"firefox.exe","class":"MozillaWindowClass","rect":{"left":1539,"top":894,"right":1520,"bottom":821}}]},"state":{}}
-{"event":{"type":"FocusWindow","content":"Up"},"state":{}}
+{"event":{"type":"FocusWindow","content":"Cima"},"state":{}}
 {"event":{"type":"FocusChange","content":["SystemForeground",{"hwnd":132968,"title":"Windows PowerShell","exe":"WindowsTerminal.exe","class":"CASCADIA_HOSTING_WINDOW_CLASS","rect":{"left":1539,"top":60,"right":1520,"bottom":821}}]},"state":{}}
 ```
 
-You may then filter on the `type` key to listen to the events that you are interested in. For a full list of possible
-notification types, refer to the enum variants of `WindowManagerEvent` in `komorebi` and `SocketMessage`
-in `komorebi::core`.
+Você pode então filtrar pela chave `type` para ouvir os eventos que você está interessado. Para uma lista completa de possíveis possíveis tipos de notificação, consulte as variantes do `WindowManagerEvent` em `komorebi` e `SocketMessage` em `komorebi::core`.
 
-Below is an example of how you can subscribe to and filter on events using a named pipe in `nodejs`.
+Abaixo está um exemplo de como você pode se inscrever e filtrar em eventos usando um pipe nomeado em `nodejs`.
 
 ```javascript
 const { exec } = require("child_process");
 const net = require("net");
 
-const pipeName = "\\\\.\\pipe\\komorebi-js";
+const pipeName = "\\\\.\\pipe\\komorebi-js-windows");
 const server = net.createServer((stream) => {
-  console.log("Client connected");
+  console.log("Cliente conectado");
 
-  // Every time there is a workspace-related event, let's log the names of all
-  // workspaces on the currently focused monitor, and then log the name of the
-  // currently focused workspace on that monitor
+  // Toda vez que houver um evento relacionado ao espaço de trabalho, vamos registrar os nomes de todos os espaços de trabalho no monitor atualmente focado, e então registrar o nome do espaço de trabalho atual nesse monitor
 
   stream.on("data", (data) => {
     let json = JSON.parse(data.toString());
@@ -338,148 +240,129 @@ const server = net.createServer((stream) => {
     if (event.type.includes("Workspace")) {
       let monitors = json.state.monitors;
       let current_monitor = monitors.elements[monitors.focused];
-      let workspaces = monitors.elements[monitors.focused].workspaces;
+      let workspaces = current_monitor.workspaces;
       let current_workspace = workspaces.elements[workspaces.focused];
 
       console.log(
         workspaces.elements
-          .map((workspace) => workspace.name)
-          .filter((name) => name !== null)
+          .map((workspace) => (
+ workspace.name)
+          .filter((name) => n
+ame !== null)
       );
       console.log(current_workspace.name);
-    }
+    );
   });
 
   stream.on("end", () => {
-    console.log("Client disconnected");
-  });
+    console.log("Cliente desconectado");
+  );
 });
 
 server.listen(pipeName, () => {
-  console.log("Named pipe server listening");
+  console.log("Servidor de pipe nomeado ouvindo");
 });
 
-const command = "komorebic subscribe-pipe komorebi-js";
+const comando = "komorebic subscribe-pipe komorebi-js";
 
-exec(command, (error, stdout, stderr) => {
-  if (error) {
-    console.error(`Error executing command: ${error}`);
+exec(comando, (erro, stdout, stderr) => {
+  if (erro) {
+    console.error(`Erro ao executar o comando: ${erro}`);
     return;
   }
 });
 ```
 
-## Unix Domain Sockets
+## Sockets de Domínio Unix
 
-It is possible to subscribe to notifications of every `WindowManagerEvent` and `SocketMessage` handled
-by `komorebi` using [Unix Domain Sockets](https://devblogs.microsoft.com/commandline/af_unix-comes-to-windows/).
+É possível se inscrever para notificações de cada `Evento do Gerenciador de Janelas` e `MensagemSocket` manejados pelo `komorebi` usando [Sockets de Domínio](https://devblogs.microsoft.com/commandline/af_unix-comes-to-windows/).
 
-UDS are also the only mode of communication between `komorebi` and `komorebic`.
+Os UDS também são o único modo de comunicação entre o `komorebi` e o `komorebic`.
 
-First, your application must create a socket in `$ENV:LocalAppData\komorebi`. Once the socket has been created, run the
-following command:
+Primeiro, seu aplicativo deve criar um socket em `$ENV:LocalAppData\komorebi`. Uma vez que o socket tenha sido criado, execute o seguinte comando:
 
 ```powershell
-komorebic.exe subscribe-socket <your socket name>
+komorebic.exe subscribe-socket <nome-do-seu-socket>
 ```
 
-If the socket exists, komorebi will start pushing JSON data of successfully handled events and messages as in the
-example above in the Named Pipes section.
+Se o socket existir, o komorebi` começará a enviar dados JSON de eventos e mensagens manipulados com sucesso como no exemplo acima na seção de Pipes Nomeados.
 
-## Rust Client
+## Cliente Rust
 
-As of `v0.1.22` it is possible to use the `komorebi-client` crate to subscribe to notifications of
-every `WindowManagerEvent` and `SocketMessage` handled by `komorebi` in a Rust codebase.
+A partir da versão `v0.1.22`, é possível usar a crate `komorebi-client` para se inscrever em notificações de cada `Evento do Gerenciador de Janelas` e `MensagemSocket` manejados por um `komorebi` em uma base de código Rust.
 
-Below is a simple example of how to use `komorebi-client` in a basic Rust application.
+Abaixo está um exemplo de como usar o `komorebi-client` em um aplicativo básico em Rust.
 
 ```rust
-// komorebi-client = { git = "https://github.com/LGUG2Z/komorebi", tag = "v0.1.37"}
+// cliente-komorebi = { git = "https://github.com/LGUG2Z/komorebi", tag = "0.1.2"}
 
-use anyhow::Result;
-use komorebi_client::Notification;
-use komorebi_client::NotificationEvent;
-use komorebi_client::UnixListener;
-use komorebi_client::WindowManagerEvent;
-use std::io::BufRead;
-use std::io::BufReader;
-use std::io::Read;
+use anyhow::Result};
+use cliente_komorebi::Notification;
+use cliente_komorebi::NotificationEvent};
+use cliente_komorebi::UnixListener};
+use std::io::BufRead};
+use std::io::BufReader};
+use std::io::Read};
 
 pub fn main() -> anyhow::Result<()> {
-  let socket = komorebi_client::subscribe(NAME)?;
+    let socket = cliente_komrebi::subscribe(NAME)?;
 
-  for incoming in socket.incoming() {
-    match incoming {
-      Ok(data) => {
-        let reader = BufReader::new(data.try_clone()?);
+    for incoming in socket.incoming() {
+        match incoming {
+            Ok(data) => {
+                let reader = BufReader::new(data.try_clone()?)?;
 
-        for line in reader.lines().flatten() {
-          let notification: Notification = match serde_json::from_str(&line) {
-            Ok(notification) => notification,
+                for line in reader.lines().flatten() {
+                    let notification: Notification = match serde_json::from_str(&line)?;
+                    let notification: Notification = match serde_json::from_str(&line) {
+                        Ok(notification) => notification,
+                        Err(error) => {
+                            log::debug!("descartando notificação malformada de komorebi: {error}");
+                            continue;
+                        },
+                    };
+
+                    // combinar e filtrar nas notificações desejadas
+                }
+            },
             Err(error) => {
-              log::debug!("discarding malformed komorebi notification: {error}");
-              continue;
-            }
-          };
-
-          // match and filter on desired notifications
+                log::debug!("{error}");
+            },
         }
-      }
-      Err(error) => {
-        log::debug!("{error}");
-      }
-    }
-  }
-
+    };
 }
+
+fn main() {
 ```
 
-A read-world example can be found
-in [komokana](https://github.com/LGUG2Z/komokana/blob/feature/komorebi-uds/src/main.rs).
+Um exemplo do mundo real pode ser encontrado em [komokana](https://github.com/LG2Z/komokana/blob/feature/komorebi-uds/src/main.rs).
 
-## Subscription Event Notification Schema
+## Esquema de Notificação de Eventos de Assinatura
 
-A [JSON Schema](https://json-schema.org/) of the event notifications emitted to subscribers can be generated with
-the `komorebic notification-schema` command. The output of this command can be redirected to the clipboard or a file,
-which can be used with services such as [Quicktype](https://app.quicktype.io/) to generate type definitions in different
-programming languages.
+Um [Esquema JSON](https://json-schema.org/) das notificações de eventos emitidas para assinantes pode ser gerado com o comando `komorebic notification-schema`. A saída desse comando pode ser redirecionada para a área de transferência ou para um arquivo, que pode ser usado com serviços como [Quicktype](https://app.quicktype.io/) para gerar definições de tipo em diferentes linguagens de programação.
 
-## Communication over TCP
+## Comunicação por TCP
 
-A TCP listener can optionally be exposed on a port of your choosing with the `--tcp-port=N` flag. If this flag is not
-provided to `komorebi` or `komorebic start`, no TCP listener will be created.
+Um ouvinte TCP pode ser opcionalmente exposto em uma porta de sua escolha com a flag `--tcp-port=N`. Se essa flag não for fornecida ao `komorebi` ou `komorebic start`, nenhum ouvinte TCP será criado.
 
-Once created, your client may send
-any [SocketMessage](https://github.com/LGUG2Z/komorebi/blob/master/komorebi/src/core/mod.rs#L37) to `komorebi` in the
-same way that `komorebic` would.
+Uma vez criado, seu cliente pode enviar qualquer [MensagemSocket](https://github.com/LGUG2Z/komorebi/blob/master/komorebi/src/core/mod.rs#L37) para o `komorebi` da mesma forma que o `komorebic` faria.
 
-This can be used if you would like to create your own alternative to `komorebic` which incorporates scripting and
-various middleware layers, and similarly it can be used if you would like to integrate `komorebi` with
-a [custom input handler](https://github.com/LGUG2Z/komorebi/issues/176#issue-1302643961).
+Isso pode ser usado se você quiser criar sua própria alternativa ao `komorebic` que incorpore scripting e várias camadas de middleware, e da mesma forma, pode ser usado se você quiser integrar o `komorebi` com um [manipulador de entrada personalizado](https://github.com/LGUG2Z/komorebi/issues/176#issue-1302643961).
 
-If a client sends an unrecognized message, it will be disconnected and have to reconnect before trying to communicate
-again.
+Se um cliente enviar uma mensagem não reconhecida, ele será desconectado e terá que reconectar antes de tentar novamente.
 
-## Socket Message Schema
+## Esquema de Mensagem de Socket
 
-A [JSON Schema](https://json-schema.org/) of socket messages used to send instructions to `komorebi` can be generated
-with the `komorebic socket-schema` command. The output of this command can be redirected to the clipboard or a file,
-which can be used with services such as [Quicktype](https://app.quicktype.io/) to generate type definitions in different
-programming languages.
+Um [Esquema JSON](https://json-schema.org/) das mensagens de socket usadas para enviar instruções ao `komorebi` pode ser gerado com o comando `komorebic socket-schema`. A saída desse comando pode ser redirecionada para a área de transferência ou para um arquivo, que pode ser usado com serviços como [Quicktype](https://app.quicktype.io/) para gerar definições de tipo em diferentes linguagens de programação.
 
-# Appreciations
+# Agradecimentos
 
-- First and foremost, thank you to my wife, both for naming this project and for her patience throughout its
-  never-ending development
+- Primeiro e mais importante, obrigado à minha esposa, tanto por nomear este projeto quanto por sua paciência durante seu desenvolvimento interminável.
 
-- Thank you to [@sitiom](https://github.com/sitiom) for
-  being [an exemplary open source community leader](https://jeezy.substack.com/p/the-open-source-contributions-i-appreciate)
+- Obrigado ao [@sitiom](https://github.com/sitiom) por ser [um líder exemplar da comunidade de código aberto](https://jeezy.substack.com/p/the-open-source-contributions-i-appreciate).
 
-- Thank you to the developers of [nog](https://github.com/TimUntersberger/nog) who came before me and whose work taught
-  me more than I can ever hope to repay
+- Obrigado aos desenvolvedores do [nog](https://github.com/TimUntersberger/nog) que vieram antes de mim e cujo trabalho me ensinou mais do que eu jamais poderia retribuir.
 
-- Thank you to the developers of [GlazeWM](https://github.com/lars-berger/GlazeWM) for pushing the boundaries of tiling
-  window management on Windows with me and having an excellent spirit of collaboration
+- Obrigado aos desenvolvedores do [GlazeWM](https://github.com/lars-berger/GlazeWM) por expandirem os limites do gerenciamento de janelas em mosaico no Windows comigo e por terem um excelente espírito de colaboração.
 
-- Thank you to [@Ciantic](https://github.com/Ciantic) for helping me bring
-  the [hidden Virtual Desktops cloaking function](https://github.com/Ciantic/AltTabAccessor/issues/1) to `komorebi`
+- Obrigado ao [@Ciantic](https://github.com/Ciantic) por me ajudar a trazer a [função de ocultação de Áreas de Trabalho Virtuais escondidas](https://github.com/ciantic/AltTabAccessor/isues/1) para o `komorebi`.
